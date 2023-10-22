@@ -30,8 +30,8 @@
         <classes>
             <class name="TC.TestPublishingPostInCommunity">
                 <methods>
-                    <exclude name="verifyPublishingPost"/>
-                    <exclude name="verifyPublishPostWithEmptyContent"/>
+                    <include name="verifyPublishingPost"/>
+                    <include name="verifyPublishPostWithEmptyContent"/>
                 </methods>
             </class>
 
