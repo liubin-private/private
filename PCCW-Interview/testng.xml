@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="All Test Suite">
+    <parameter name="SCREENSHOT_DIR" value="/screenshot/"/>
+    <parameter name="TEST_DATA_PATH" value="/data/"/>
+    <test verbose="2" preserve-order="true" name="1#">
+        <parameter name="IMAGE_UPLOAD_DOMAIN" value="https://image.baidu.com/"/>
+        <parameter name="IMAGE_SEARCHED_DOMAIN" value="https://graph.baidu.com/" />
+        <parameter name="IMAGE_UPLOAD" value="BMW.jpg" />
+        <parameter name="VISIT_RESULT" value="(0,2)"/>
+        <parameter name="DOWNLOAD_DIR" value="/download/"/>
+        <classes>
+            <class name="TC.TestImageSearch">
+                <methods>
+                    <include name="verifyImageSimilarSearched"/>
+                   <include name="verifyVisitSimilarImagePage"/>
+                </methods>
+
+            </class>
+
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true" name="2#">
+        <parameter name="COMMUNITY_SERVER_DOMAIN" value="https://www.xxx.com" />
+        <parameter name="COMMUNITY_LOGIN_PATH" value="/user/login"/>
+        <parameter name="COMMUNITY_HOME_PATH" value="/community/4695/"/>
+        <parameter name="COMMUNITY_LOGOUT_PATH" value="/user/logout" />
+        <parameter name="TEST_DATA_FILE" value="E2E-Test-Post.yaml"/>
+        <parameter name="TEST_USER" value="E2E-User.yaml"/>
+        <parameter name="PERF_TEST_DATA_FILE" value="Performance-Test.csv"/>
+        <classes>
+            <class name="TC.TestPublishingPostInCommunity">
+                <methods>
+                    <exclude name="verifyPublishingPost"/>
+                    <exclude name="verifyPublishPostWithEmptyContent"/>
+                </methods>
+            </class>
+
+            <class name="TC.PreformanceTestPublishingPostInCommunity">
+                <methods>
+                    <include name="verifyParallelingUserPublishingPost"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
