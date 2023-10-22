@@ -20,7 +20,7 @@
         </classes>
     </test>
     <test verbose="2" preserve-order="true" name="2#">
-        <parameter name="COMMUNITY_SERVER_DOMAIN" value="https://www.xxx.com" />
+        <parameter name="COMMUNITY_SERVER_DOMAIN" value="https://www.xyz.com" />
         <parameter name="COMMUNITY_LOGIN_PATH" value="/user/login"/>
         <parameter name="COMMUNITY_HOME_PATH" value="/community/4695/"/>
         <parameter name="COMMUNITY_LOGOUT_PATH" value="/user/logout" />
