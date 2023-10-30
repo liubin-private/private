@@ -11,8 +11,6 @@
   image: "BMW.jpg"
 - description: "Function Test Verify no Text in Content But have a Image Uploaded In Post Publishing"
   image: "BMW.jpg"
-- description: "Security Test Verify Sql Injection"
-  text-content: ""
 - description: "Security Test Verify Xss Attacking -show up an alert"
   text-content: "<img src=\"test\" onError=alert('Hi');/>"
 - description: "Security Test Verify Xss Attacking -show red color font"
